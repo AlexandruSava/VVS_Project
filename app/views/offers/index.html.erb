@@ -1,3 +1,76 @@
+<header class="main-header">
+    <nav class="main-nav">
+        <figure class="nav-logo">
+            <a href="#"><%= image_tag("logo.png", class: "logo inver-color", alt: "logo-image-small") %></a>
+        </figure>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a>|</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <figure class="cover">
+        <h1 class="motto">Your Journey Beginns with Us</h1>
+    </figure>
+</header>
+
+<main class="main-content">
+    <h2>Check our Offers</h2>
+    <section class="main-offers">
+        <% @offers.each do |offer| %>
+          <figure class="offer-container">
+              <%= link_to offer do %>
+                  <% if offer.image.attached? %>
+                    <td><%= image_tag offer.image, class: "main-offers-img" %></td>
+                  <% end %>
+                  <div class="offer-container-box">
+                      <div class="offer-box-column">
+                          <strong><%= offer.location%> / <%= offer.country%></strong>
+                          <strong><%= offer.name%></strong>
+                      </div>
+                      <div class="offer-box-column">
+                          <strong><%= offer.meals%></strong>
+                          <strong>$ <%= offer.price%> / night</strong>
+                      </div>
+                  </div>
+              <% end %>
+          </figure>
+        <% end %>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <section class="footer-upper-part">
+        <section class="main-logo-motto">
+            <%= image_tag("logo.png", alt: "logo-image-big")%>
+            <%= image_tag("motto.png", alt: "motto")%>
+        </section>
+
+        <section class="contact-us">
+            <h2>Contact Us</h2>
+            <section class="contact-item">
+                <%= image_tag("icon-phone.png", alt: "phone-logo")%>
+                <a href="tel:+123456789012">+ 1234 5678 9012</a>
+            </section>
+            <section class="contact-item">
+                <%= image_tag("icon-email.png", alt: "email-logo", width: "50", height: "50")%>
+                <a href="mailto:contact@travel.com">contact@travel.com</a>
+            </section>
+        </section>
+    </section>
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="#"><%= image_tag("icon-facebook.png", alt: "facebook-logo", width: "70", height: "70")%></a></li>
+            <li><a href="#"><%= image_tag("icon-instagram.png", alt: "instagram-logo", width: "50", height: "50")%></a></li>
+            <li><a href="#"><%= image_tag("icon-twitter.png", alt: "twitter-logo", width: "50", height: "50")%></a></li>
+            <li><a href="#"><%= image_tag("icon-youtube.png", alt: "youtube-logo", width: "60", height: "60")%></a></li>
+            <li id="copyright">Copyright @2021</li>
+        </ul>
+    </nav>
+</footer>
+
+<br><br><br>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Offers</h1>
