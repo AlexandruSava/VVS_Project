@@ -3,7 +3,7 @@ class OffersController < ApplicationController
 
   # GET /offers or /offers.json
   def index
-    @offers = Offer.all
+    @offers = Offer.all.with_attached_image
   end
 
   # GET /offers/1 or /offers/1.json
@@ -64,6 +64,6 @@ class OffersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def offer_params
-      params.require(:offer).permit(:name, :description, :phone, :email, :country, :location, :meals, :price, :stars, :rating, :cleaning, :food, :staff, :confort, :host_name, :minimum_stay)
+      params.require(:offer).permit(:name, :description, :phone, :email, :country, :location, :meals, :price, :stars, :rating, :cleaning, :food, :staff, :confort, :host_name, :minimum_stay, :image)
     end
 end

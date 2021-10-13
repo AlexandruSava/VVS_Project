@@ -21,6 +21,7 @@
       <th>Confort</th>
       <th>Host name</th>
       <th>Minimum stay</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -44,6 +45,9 @@
         <td><%= offer.confort %></td>
         <td><%= offer.host_name %></td>
         <td><%= offer.minimum_stay %></td>
+        <% if offer.image.attached? %>
+          <td><%= image_tag offer.image.variant(resize: "500x500") %></td>
+        <% end %>
         <td><%= link_to 'Show', offer %></td>
         <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
         <td><%= link_to 'Destroy', offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
