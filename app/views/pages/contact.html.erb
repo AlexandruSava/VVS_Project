@@ -1,0 +1,137 @@
+<header class="main-header">
+  <nav class="main-nav">
+      <figure class="nav-logo">
+          <%= image_tag("logo.png", alt: "logo-image-small", class: "logo invert-color")%>
+      </figure>
+      <ul>
+          <li><%= link_to offers_path do %>Home<% end %></li>
+          <li><a>|</a></li>
+          <li><%= link_to contact_path do %>Contact<% end %></li>
+      </ul>
+  </nav>
+</header>
+
+<main class="main-content">
+  <section class="main-content-contact">
+    <h2>Take a Look Here</h2>
+    <section class="contact-item">
+      <%= image_tag("icon-facebook.png", alt: "facebook-logo", width: "50", height: "50")%>
+      <a href="#">www.facebook.com/travel</a>
+    </section>
+    <section class="contact-item">
+      <%= image_tag("icon-instagram.png", alt: "instagram-logo", width: "50", height: "50")%>
+      <a href="#">www.instagram.com/travel</a>
+    </section>
+    <section class="contact-item">
+      <%= image_tag("icon-youtube.png", alt: "youtube-logo", width: "50", height: "50")%>
+      <a href="#">www.youtube.com/travel</a>
+    </section>
+
+    <h2>Visit us</h2>
+    <section class="contact-item">
+      <%= image_tag("icon-location.png", alt: "location-pin-logo", width: "50", height: "50")%>
+      <a href="#">Brașov, Romania</a>
+    </section>
+    <section class="contact-item">
+      <%= image_tag("icon-phone.png", alt: "phone-logo", width: "50", height: "50", class: "invert-color")%>
+      <a href="#">+ 1234 5678 9012</a>
+    </section>
+    <section class="contact-item">
+      <%= image_tag("icon-email.png", alt: "email-logo", width: "50", height: "50", class: "invert-color")%>
+      <a href="mailto:contact@travel.com">contact@travel.com</a>
+    </section>
+  </section>
+
+  <section class="main-content-form">
+    <h2>Contact</h2>
+    <form name="contactForm">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input
+          id="firstName"
+          class="form-control"
+          type="text"
+          name="firstName"
+          placeholder="Jon"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input
+          id="lastName"
+          class="form-control"
+          type="text"
+          name="lastName"
+          placeholder="Doe"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input
+          id="phone"
+          class="form-control"
+          type="text"
+          name="phone"
+          placeholder="+40 731 660 186"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          class="form-control"
+          placeholder="name@example.com"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          class="form-control"
+          name="message"
+          placeholder="I need an offer for a 7 nights holiday ..."
+          rows="10"
+          cols="40"
+          required
+        ></textarea>
+      </div>
+
+      <div id="errorAlert" class="error"></div>
+
+      <div class="form-group">
+        <button type="button" class="btn btn-primary">
+          Submit
+        </button>
+      </div>
+    </form>
+
+    <div id="successMessage" class="success hidden">
+      Message sent successfully!
+    </div>
+
+  </section>
+</main>
+
+<footer class="main-footer">
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="#"><%= image_tag("icon-facebook.png", alt: "facebook-logo", width: "70", height: "70")%></a></li>
+            <li><a href="#"><%= image_tag("icon-instagram.png", alt: "instagram-logo", width: "50", height: "50")%></a></li>
+            <li><a href="#"><%= image_tag("icon-twitter.png", alt: "twitter-logo", width: "50", height: "50")%></a></li>
+            <li><a href="#"><%= image_tag("icon-youtube.png", alt: "youtube-logo", width: "60", height: "60")%></a></li>
+            <li id="copyright">Copyright @2021</li>
+        </ul>
+    </nav>
+</footer>
+
+<%= javascript_include_tag 'script'%>
