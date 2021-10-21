@@ -1,3 +1,13 @@
+# TODO
+- add contact style and change it accordingly
+- add validations for Offer
+- populate more the website
+- add login feature
+- add admin page
+- add unit testing for Offer
+- add unit testing for users/login
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the

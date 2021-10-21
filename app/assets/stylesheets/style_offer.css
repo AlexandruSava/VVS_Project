@@ -116,7 +116,7 @@ body {
 
 /* Header Media Screen */
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 1100px) {
 	.main-nav ul {
 	  width: 100%;
 	  margin-top: 0;
@@ -141,7 +141,7 @@ body {
 
 /* Main */
 
-.main-content, .up {
+.main-content-page, .up {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -206,7 +206,6 @@ body {
 }
 
 .resort h2 {
-  text-align: center;
   font-size: 1.5rem;
   text-transform: uppercase;
   text-shadow: 0.5px 1px var(--main-shadow-color);
@@ -699,7 +698,7 @@ button:hover {
 
 /* Foooter Media Screen */
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1100px) {
 
 	/* Footer -> Upper Part*/
 	.footer-upper-part {
