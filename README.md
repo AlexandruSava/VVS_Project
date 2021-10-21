@@ -1,6 +1,7 @@
 # TODO
-- add contact style and change it accordingly
-- add validations for Offer
++ add contact style and change it accordingly
++ add validations for Offer
++ fix ratings width in offers/show
 - populate more the website
 - add login feature
 - add admin page

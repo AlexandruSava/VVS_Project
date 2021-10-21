@@ -34,19 +34,19 @@
       </section>
       <section class="amenities">
         <div class="progress" data-label="Overall Rating">
-          <span class="value" style="width:85%;"></span>
+          <span class="value" style="width:<%= @offer.get_rating(@offer) %>%;"></span>
         </div>
         <div class="progress" data-label="Cleaning">
-          <span class="value" style="width:100%;"></span>
+          <span class="value" style="width:<%= @offer.cleaning %>%;"></span>
         </div>
         <div class="progress" data-label="Food">
-          <span class="value" style="width:75%;"></span>
+          <span class="value" style="width:<%= @offer.food %>%;"></span>
         </div>
         <div class="progress" data-label="Staff">
-          <span class="value" style="width:92%;"></span>
+          <span class="value" style="width:<%= @offer.staff %>%;"></span>
         </div>
         <div class="progress" data-label="Confort">
-          <span class="value" style="width:80%;"></span>
+          <span class="value" style="width:<%= @offer.confort %>%;"></span>
         </div>
       </section>
       <section class="description">
