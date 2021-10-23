@@ -9,14 +9,14 @@ one:
   location: MyString
   meals: MyString
   price: 1.5
-  stars: 
-  rating: 
-  cleaning: 
-  food: 
-  staff: 
-  confort: 
+  stars: 3
+  rating:
+  cleaning: 40
+  food: 50
+  staff: 65
+  confort: 70
   host_name: MyString
-  minimum_stay: MyString
+  minimum_stay: 5
 
 two:
   name: MyString
@@ -27,11 +27,11 @@ two:
   location: MyString
   meals: MyString
   price: 1.5
-  stars: 
-  rating: 
-  cleaning: 
-  food: 
-  staff: 
-  confort: 
+  stars: 5
+  rating:
+  cleaning: 40
+  food: 32
+  staff: 99
+  confort: 100
   host_name: MyString
   minimum_stay: MyString

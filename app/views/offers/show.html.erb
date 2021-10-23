@@ -90,10 +90,10 @@
 
   <section class="buttons">
     <section class="button-back">
-      <a href="index.html">
-        <%= image_tag("icon-arrow.png", alt: "arrow-logo", width: 40, height: 40, class: "rotate90")%>
-        <h3>Back to Resort Listing</h3>
-      </a>
+      <%= link_to offers_path do %>
+          <%= image_tag("icon-arrow.png", alt: "arrow-logo", width: 40, height: 40, class: "rotate90")%>
+          <h3>Back to Resort Listing</h3>
+      <% end %>
     </section>
     <section class="button-book">
       <a href="#anchor">
@@ -312,91 +312,94 @@
     </nav>
 </footer>
 
-<br><br><br>
+<% if current_user %>
 
-<p id="notice"><%= notice %></p>
+  <br><br><br>
 
-<p>
-  <strong>Name:</strong>
-  <%= @offer.name %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @offer.description %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @offer.name %>
+  </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @offer.phone %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @offer.description %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @offer.email %>
-</p>
+  <p>
+    <strong>Phone:</strong>
+    <%= @offer.phone %>
+  </p>
 
-<p>
-  <strong>Country:</strong>
-  <%= @offer.country %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @offer.email %>
+  </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @offer.location %>
-</p>
+  <p>
+    <strong>Country:</strong>
+    <%= @offer.country %>
+  </p>
 
-<p>
-  <strong>Meals:</strong>
-  <%= @offer.meals %>
-</p>
+  <p>
+    <strong>Location:</strong>
+    <%= @offer.location %>
+  </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @offer.price %>
-</p>
+  <p>
+    <strong>Meals:</strong>
+    <%= @offer.meals %>
+  </p>
 
-<p>
-  <strong>Stars:</strong>
-  <%= @offer.stars %>
-</p>
+  <p>
+    <strong>Price:</strong>
+    <%= @offer.price %>
+  </p>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @offer.rating %>
-</p>
+  <p>
+    <strong>Stars:</strong>
+    <%= @offer.stars %>
+  </p>
 
-<p>
-  <strong>Cleaning:</strong>
-  <%= @offer.cleaning %>
-</p>
+  <p>
+    <strong>Rating:</strong>
+    <%= @offer.rating %>
+  </p>
 
-<p>
-  <strong>Food:</strong>
-  <%= @offer.food %>
-</p>
+  <p>
+    <strong>Cleaning:</strong>
+    <%= @offer.cleaning %>
+  </p>
 
-<p>
-  <strong>Staff:</strong>
-  <%= @offer.staff %>
-</p>
+  <p>
+    <strong>Food:</strong>
+    <%= @offer.food %>
+  </p>
 
-<p>
-  <strong>Confort:</strong>
-  <%= @offer.confort %>
-</p>
+  <p>
+    <strong>Staff:</strong>
+    <%= @offer.staff %>
+  </p>
 
-<p>
-  <strong>Host name:</strong>
-  <%= @offer.host_name %>
-</p>
+  <p>
+    <strong>Confort:</strong>
+    <%= @offer.confort %>
+  </p>
 
-<p>
-  <strong>Minimum stay:</strong>
-  <%= @offer.minimum_stay %>
-</p>
+  <p>
+    <strong>Host name:</strong>
+    <%= @offer.host_name %>
+  </p>
 
-<%= link_to 'Edit', edit_offer_path(@offer) %> |
-<%= link_to 'Back', offers_path %>
+  <p>
+    <strong>Minimum stay:</strong>
+    <%= @offer.minimum_stay %>
+  </p>
 
-<%= javascript_include_tag 'script_offer'%>
+  <%= link_to 'Edit', edit_offer_path(@offer) %> |
+  <%= link_to 'Back', offers_path %>
+
+  <%= javascript_include_tag 'script_offer'%>
+<% end %>
