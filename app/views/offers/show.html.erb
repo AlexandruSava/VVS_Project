@@ -60,7 +60,7 @@
     </section>
     <section class="details">
       <section class="price">
-        <h2>$ <%= @offer.price%> / night</h2>
+        <h2>$ <p id="offer-price"><%= @offer.price %><p> / night</h2>
       </section>
       <section class="host-details">
         <section class="details-item">
@@ -400,6 +400,10 @@
 
   <%= link_to 'Edit', edit_offer_path(@offer) %> |
   <%= link_to 'Back', offers_path %>
+
+  <script>
+    document.getElementById("offer-price").value = <%= @offer.price%>;
+  </script>
 
   <%= javascript_include_tag 'script_offer'%>
 <% end %>

@@ -1,7 +1,7 @@
 let checkInDate = null;
 let checkOutDate = null;
 let period = null;
-let price = 35;
+let price = parseFloat(document.getElementById("offer-price").value);
 
 function handler1(e){
   checkInDate = e.target.value;
