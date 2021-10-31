@@ -5,9 +5,6 @@ Rails.application.routes.draw do
     :sign_up => "register"
   }
 
-  get '/login', :to => 'devise/sessions#new'
-
-
   root 'offers#index'
 
   get 'contact' => 'pages#contact'
