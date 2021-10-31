@@ -7,6 +7,13 @@
             <li><%= link_to offers_path do %>Home<% end %></li>
             <li><a>|</a></li>
             <li><%= link_to contact_path do %>Contact<% end %></li>
+            <% if current_user %>
+                <li><a>|</a></li>
+                <li><%= link_to destroy_user_session_path, method: :delete do %>Logout<% end %></li>
+            <% else %>
+                <li><a>|</a></li>
+                <li><%= link_to new_user_session_path do %>Login<% end %></li>
+            <% end %>
         </ul>
     </nav>
     <figure class="cover">

@@ -3,8 +3,11 @@
 + add validations for Offer
 + fix ratings width in offers/show
 - populate more the website
-- add login feature
-- add admin page
++ add login feature
+  + change routes to be more easily reacheable
+  + add login button
+  - make forms look better
++ add admin page
 - add unit testing for Offer
 - add unit testing for users/login
 
