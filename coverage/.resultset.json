@@ -1,0 +1,93 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/alex/projects/vvs_project/test/controllers/offers_controller_test.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/alex/projects/vvs_project/test/controllers/pages_controller_test.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/alex/projects/vvs_project/test/models/offer_test.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/alex/projects/vvs_project/test/models/user_test.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1635712048
+  }
+}
