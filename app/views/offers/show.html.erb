@@ -1,0 +1,412 @@
+<header class="main-header" id="anchorUp">
+    <nav class="main-nav">
+        <figure class="nav-logo">
+            <a href="#"><%= image_tag("logo.png", alt: "logo-image-small", class: "logo invert-color")%></a>
+        </figure>
+        <ul>
+            <li><%= link_to offers_path do %>Home<% end %></li>
+            <li><a>|</a></li>
+            <li><%= link_to contact_path do %>Contact<% end %></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-content-page">
+  <section class="up">
+  <section class="page">
+    <section class="line">
+      <strong>
+        <%= @offer.location %>, <%= @offer.country %>
+      </strong>
+    </section>
+    <section class="resort">
+      <h2>
+        <%= @offer.name %>
+      </h2>
+      <section class="stars">
+        <% for i in 1..5 do %>
+          <% if i <= @offer.stars %>
+            &#9733;
+          <% else %>
+            &#9734;
+          <% end%>
+        <% end %>
+      </section>
+      <section class="amenities">
+        <div class="progress" data-label="Overall Rating">
+          <span class="value" style="width:<%= @offer.get_rating(@offer) %>%;"></span>
+        </div>
+        <div class="progress" data-label="Cleaning">
+          <span class="value" style="width:<%= @offer.cleaning %>%;"></span>
+        </div>
+        <div class="progress" data-label="Food">
+          <span class="value" style="width:<%= @offer.food %>%;"></span>
+        </div>
+        <div class="progress" data-label="Staff">
+          <span class="value" style="width:<%= @offer.staff %>%;"></span>
+        </div>
+        <div class="progress" data-label="Confort">
+          <span class="value" style="width:<%= @offer.confort %>%;"></span>
+        </div>
+      </section>
+      <section class="description">
+        <p>
+          <%= @offer.description%>
+        </p>
+        <p class="tags">
+          #mountain #PiatraCraiului #quiet #guidedTours
+        </p>
+      </section>
+    </section>
+    <section class="details">
+      <section class="price">
+        <h2>$ <p id="offer-price"><%= @offer.price %><p> / night</h2>
+      </section>
+      <section class="host-details">
+        <section class="details-item">
+          <%= image_tag("icon-user.png", alt: "user-logo", width: 50, height: 50, class: "invert-color")%>
+          <div class="details-item-text">
+            <h3>Your host</h3>
+            <h3><%= @offer.host_name %></h3>
+          </div>
+        </section>
+        <section class="details-item">
+          <%= image_tag("icon-clock.png", alt: "clock-logo", width: 50, height: 50, class: "invert-color")%>
+          <div class="details-item-text">
+            <h3>Minimum stay</h3>
+            <h3><%= @offer.minimum_stay %> nights</h3>
+          </div>
+        </section>
+        <section class="details-item">
+          <%= image_tag("icon-placeholder.png", alt: "placeholder-logo", width: 50, height: 50, class: "invert-color")%>
+          <div class="details-item-text">
+            <h3>Location</h3>
+            <h3><%= @offer.country %></h3>
+          </div>
+        </section>
+      </section>
+    </section>
+  </section>
+
+  <section class="buttons">
+    <section class="button-back">
+      <%= link_to offers_path do %>
+          <%= image_tag("icon-arrow.png", alt: "arrow-logo", width: 40, height: 40, class: "rotate90")%>
+          <h3>Back to Resort Listing</h3>
+      <% end %>
+    </section>
+    <section class="button-book">
+      <a href="#anchor">
+        <h3>Book a Room</h3>
+        <%= image_tag("icon-arrow.png", alt: "arrow-logo", width: 40, height: 40)%>
+      </a>
+    </section>
+  </section>
+  </section>
+  <section class="buttons" id="anchor">
+    <section class="button-back-resort displaynone">
+      <a href="#anchorUp">
+        <%= image_tag("icon-arrow.png", alt: "arrow-logo", width: 40, height: 40, class: "rotate180")%>
+        <h3>Back to Resort</h3>
+      </a>
+    </section>
+  </section>
+
+  <section class="page-down">
+    <section class="line">
+      <strong>
+        Booking
+      </strong>
+    </section>
+    <section class="resort">
+      <h3>Book your room at</h3>
+      <h2><%= @offer.name %></h2>
+      <section class="stars">
+        <% for i in 1..5 do %>
+          <% if i <= @offer.stars %>
+            &#9733;
+          <% else %>
+            &#9734;
+          <% end%>
+        <% end %>
+      </section>
+      <section class="main-content-form">
+        <form name="contactForm">
+          <div class="form-group">
+            <label for="checkIn">Check In</label>
+            <input
+              id="checkIn"
+              class="form-control"
+              type="date"
+              name="checkIn"
+              onchange="handler1(event);"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="checkOut">Check Out</label>
+            <input
+              id="checkOut"
+              class="form-control"
+              type="date"
+              name="checkOut"
+              onchange="handler2(event);"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input
+              id="firstName"
+              class="form-control"
+              type="text"
+              name="firstName"
+              placeholder="Jon"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input
+              id="lastName"
+              class="form-control"
+              type="text"
+              name="lastName"
+              placeholder="Doe"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              id="phone"
+              class="form-control"
+              type="text"
+              name="phone"
+              placeholder="+40 731 660 186"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input
+              name="email"
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="attendees">Scope</label>
+            <select class="form-control" id="attendees" name="attendees">
+              <option value="0">Not specified</option>
+              <option value="1">Business</option>
+              <option value="2">Leisure</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message (optional)</label>
+            <textarea
+              id="message"
+              class="form-control"
+              name="message"
+              placeholder="I want a room at a higher floor .."
+              rows="10"
+              cols="40"
+            ></textarea>
+          </div>
+
+          <div id="errorAlert" class="error"></div>
+
+          <div class="form-group">
+            <button type="button" class="btn btn-primary">
+              Submit
+            </button>
+          </div>
+        </form>
+
+        <div id="successMessage" class="success hidden">
+          Booking request successfully sent!
+        </div>
+      </section>
+    </section>
+
+    <section class="details">
+      <section class="price" id="total-price">
+        <p>$ <strong id="trip-price"></strong> / trip</p>
+        <p><strong id="nights"></strong> nights</p>
+      </section>
+      <section class="host-details">
+        <section class="details-item">
+          <%= image_tag("icon-user.png", alt: "user-logo", width: 50, height: 50)%>
+          <div class="details-item-text">
+            <h3>Your host</h3>
+            <h3><%= @offer.host_name %></h3>
+          </div>
+        </section>
+        <section class="details-item">
+          <%= image_tag("icon-clock.png", alt: "clock-logo", width: 50, height: 50)%>
+          <div class="details-item-text">
+            <h3>Minimum stay</h3>
+            <h3><%= @offer.minimum_stay %> nights</h3>
+          </div>
+        </section>
+        <section class="details-item">
+          <%= image_tag("icon-placeholder.png", alt: "placeholder-logo", width: 50, height: 50)%>
+          <div class="details-item-text">
+            <h3>Location</h3>
+            <h3><%= @offer.country %></h3>
+          </div>
+        </section>
+      </section>
+    </section>
+  </section>
+
+  <section class="buttons" id="button-hidden">
+    <section class="button-back-resort">
+      <a href="#anchorUp">
+        <%= image_tag("icon-arrow.png", alt: "icon-arrow", width: 40, height: 40, class: "rotate180")%>
+        <h3>Back to Resort</h3>
+      </a>
+    </section>
+  </section>
+
+</main>
+
+<footer class="main-footer">
+    <section class="footer-upper-part">
+        <section class="main-logo-motto">
+            <%= image_tag("logo.png", alt: "logo-image-big")%>
+            <%= image_tag("motto.png", alt: "motto")%>
+        </section>
+
+        <section class="contact-us">
+            <h2>Contact Us</h2>
+            <section class="contact-item">
+                <%= image_tag("icon-phone.png", alt: "phone-logo")%>
+                <a href="tel:+123456789012"><%= @offer.phone %></a>
+            </section>
+            <section class="contact-item">
+                <%= image_tag("icon-email.png", alt: "email-logo", width: "50", height: "50")%>
+                <a href="mailto:contact@travel.com"><%= @offer.email %></a>
+            </section>
+        </section>
+    </section>
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="#"><%= image_tag("icon-facebook.png", alt: "facebook-logo", width: "70", height: "70")%></a></li>
+            <li><a href="#"><%= image_tag("icon-instagram.png", alt: "instagram-logo", width: "50", height: "50")%></a></li>
+            <li><a href="#"><%= image_tag("icon-twitter.png", alt: "twitter-logo", width: "50", height: "50")%></a></li>
+            <li><a href="#"><%= image_tag("icon-youtube.png", alt: "youtube-logo", width: "60", height: "60")%></a></li>
+            <li id="copyright">Copyright @2021</li>
+        </ul>
+    </nav>
+</footer>
+
+<% if current_user %>
+
+  <br><br><br>
+  <section class="form-style">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Name:</strong>
+      <%= @offer.name %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= @offer.description %>
+    </p>
+
+    <p>
+      <strong>Phone:</strong>
+      <%= @offer.phone %>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <%= @offer.email %>
+    </p>
+
+    <p>
+      <strong>Country:</strong>
+      <%= @offer.country %>
+    </p>
+
+    <p>
+      <strong>Location:</strong>
+      <%= @offer.location %>
+    </p>
+
+    <p>
+      <strong>Meals:</strong>
+      <%= @offer.meals %>
+    </p>
+
+    <p>
+      <strong>Price:</strong>
+      <%= @offer.price %>
+    </p>
+
+    <p>
+      <strong>Stars:</strong>
+      <%= @offer.stars %>
+    </p>
+
+    <p>
+      <strong>Cleaning:</strong>
+      <%= @offer.cleaning %>
+    </p>
+
+    <p>
+      <strong>Food:</strong>
+      <%= @offer.food %>
+    </p>
+
+    <p>
+      <strong>Staff:</strong>
+      <%= @offer.staff %>
+    </p>
+
+    <p>
+      <strong>Confort:</strong>
+      <%= @offer.confort %>
+    </p>
+
+    <p>
+      <strong>Host name:</strong>
+      <%= @offer.host_name %>
+    </p>
+
+    <p>
+      <strong>Minimum stay:</strong>
+      <%= @offer.minimum_stay %>
+    </p>
+
+    <% if @offer.image.attached? %>
+      <p>
+        <strong>Image</strong>
+        <%= image_tag @offer.image.variant(resize: "500x500") %>
+      </p>
+    <% end %>
+
+    <%= link_to 'Edit', edit_offer_path(@offer) %> |
+    <%= link_to 'Back', offers_path %>
+
+    <script>
+      document.getElementById("offer-price").value = <%= @offer.price%>;
+    </script>
+
+    <%= javascript_include_tag 'script_offer'%>
+  </section>
+<% end %>

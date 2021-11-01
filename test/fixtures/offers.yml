@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  phone: MyString
+  email: MyString
+  country: MyString
+  location: MyString
+  meals: MyString
+  price: 1.5
+  stars: 3
+  rating:
+  cleaning: 40
+  food: 50
+  staff: 65
+  confort: 70
+  host_name: MyString
+  minimum_stay: 5
+
+two:
+  name: MyString
+  description: MyString
+  phone: MyString
+  email: MyString
+  country: MyString
+  location: MyString
+  meals: MyString
+  price: 1.5
+  stars: 5
+  rating:
+  cleaning: 40
+  food: 32
+  staff: 99
+  confort: 100
+  host_name: MyString
+  minimum_stay: MyString

@@ -1,0 +1,125 @@
+<header class="main-header">
+    <nav class="main-nav">
+        <figure class="nav-logo">
+            <a href="#"><%= image_tag("logo.png", class: "logo invert-color", alt: "logo-image-small") %></a>
+        </figure>
+        <ul>
+            <li><%= link_to offers_path do %>Home<% end %></li>
+            <li><a>|</a></li>
+            <li><%= link_to contact_path do %>Contact<% end %></li>
+            <% if current_user %>
+                <li><a>|</a></li>
+                <li><%= link_to destroy_user_session_path, method: :delete do %>Logout<% end %></li>
+            <% else %>
+                <li><a>|</a></li>
+                <li><%= link_to new_user_session_path do %>Login<% end %></li>
+            <% end %>
+        </ul>
+    </nav>
+    <figure class="cover">
+        <h1 class="motto">Your Journey Beginns with Us</h1>
+    </figure>
+</header>
+
+<main class="main-content">
+    <h2>Check our Offers</h2>
+    <section class="main-offers">
+        <% @offers.each do |offer| %>
+          <figure class="offer-container">
+              <%= link_to offer do %>
+                  <% if offer.image.attached? %>
+                    <td><%= image_tag offer.image, class: "main-offers-img" %></td>
+                  <% end %>
+                  <div class="offer-container-box">
+                      <div class="offer-box-column">
+                          <strong><%= offer.location%> / <%= offer.country%></strong>
+                          <strong><%= offer.name%></strong>
+                      </div>
+                      <div class="offer-box-column">
+                          <strong><%= offer.meals%></strong>
+                          <strong>$ <%= offer.price%> / night</strong>
+                      </div>
+                  </div>
+              <% end %>
+          </figure>
+        <% end %>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <section class="footer-upper-part">
+        <section class="main-logo-motto">
+            <%= image_tag("logo.png", alt: "logo-image-big")%>
+            <%= image_tag("motto.png", alt: "motto")%>
+        </section>
+
+        <section class="contact-us">
+            <h2>Contact Us</h2>
+            <section class="contact-item">
+                <%= image_tag("icon-phone.png", alt: "phone-logo")%>
+                <a href="tel:+123456789012">+ 1234 5678 9012</a>
+            </section>
+            <section class="contact-item">
+                <%= image_tag("icon-email.png", alt: "email-logo", width: "50", height: "50")%>
+                <a href="mailto:contact@travel.com">contact@travel.com</a>
+            </section>
+        </section>
+    </section>
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="#"><%= image_tag("icon-facebook.png", alt: "facebook-logo", width: "70", height: "70")%></a></li>
+            <li><a href="#"><%= image_tag("icon-instagram.png", alt: "instagram-logo", width: "50", height: "50")%></a></li>
+            <li><a href="#"><%= image_tag("icon-twitter.png", alt: "twitter-logo", width: "50", height: "50")%></a></li>
+            <li><a href="#"><%= image_tag("icon-youtube.png", alt: "youtube-logo", width: "60", height: "60")%></a></li>
+            <li id="copyright">Copyright @2021</li>
+        </ul>
+    </nav>
+</footer>
+<% if current_user %>
+    <br><br><br>
+
+    <section class="form-style">
+
+        <p id="notice"><%= notice %></p>
+
+        <h1>Offers</h1>
+
+        <table>
+        <thead>
+            <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Country</th>
+            <th>Location</th>
+            <th>Host name</th>
+            <th>Image</th>
+            <th colspan="3"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @offers.each do |offer| %>
+            <tr>
+                <td><%= offer.name %></td>
+                <td><%= offer.phone %></td>
+                <td><%= offer.email %></td>
+                <td><%= offer.country %></td>
+                <td><%= offer.location %></td>
+                <td><%= offer.host_name %></td>
+                <% if offer.image.attached? %>
+                <td><%= image_tag offer.image.variant(resize: "500x500") %></td>
+                <% end %>
+                <td><%= link_to 'Show', offer %></td>
+                <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
+                <td><%= link_to 'Destroy', offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+            <% end %>
+        </tbody>
+        </table>
+
+        <br>
+
+        <%= link_to 'New Offer', new_offer_path %>
+    </section>
+<% end %>

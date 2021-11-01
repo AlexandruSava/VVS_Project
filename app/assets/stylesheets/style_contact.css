@@ -1,0 +1,241 @@
+/* Main */
+
+.main-content-special {
+	background-image: url(cover-offer.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	font-weight: 600;
+}
+
+.main-content-special {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+	justify-content: center;
+}
+
+.main-content-special h2 {
+	text-align: center;
+	margin: 20px auto;
+	font-size: 2rem;
+	text-transform: uppercase;
+	text-shadow: 0.5px 1px var(--main-text-color-over-pictures);
+}
+
+.main-content-special-contact {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+	justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-content-special-contact h2 {
+  align-self: center;
+}
+
+.main-content-special-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+	justify-content: center;
+}
+
+.contact-item-special {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.contact-item-special a {
+	color: var(--main-text-color-over-pictures);
+	text-align: center;
+	font-size: 1.2rem;
+	text-shadow: 0.5px 1px var(--main-shadow-color);
+	text-decoration: none;
+  padding-left: 20px;
+}
+
+
+/* Form */
+
+input {
+	width: 100%;
+	padding-left: 10px;
+	min-height: 30px;
+	-webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+	font-size: 1rem;
+}
+
+input:focus {
+	border-radius: 5px;
+	border: 3px solid #555;
+}
+
+textarea {
+	padding: 10px 10px 10px 10px;
+	min-height: 200px;
+	min-width: 98%;
+	max-width: 98%;
+	border-width: 2px;
+	-webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+	font-size: 1rem;
+}
+
+textarea:focus {
+	border-radius: 5px;
+	border: 3px solid #555;
+}
+
+.main-content-special-form form {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.form-control {
+	border-radius: 20px;
+	width: 100%;
+}
+
+.form-group-special {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.form-group-special label {
+	color: var(--main-text-color-over-pictures);
+	font-size: 1.5rem;
+	text-shadow: 0.5px 1px var(--main-shadow-color);
+	text-decoration: none;
+	margin-bottom: 5px;
+}
+
+.form-group-special {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.4rem;
+  max-width: 30em;
+}
+
+.form-group-special label {
+  margin-bottom: 0.4rem;
+}
+
+.error {
+  color: red;
+}
+
+button {
+  background-color: #333;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+	margin-bottom: 20px;
+}
+
+button:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.success {
+  color: white;
+  margin: 1em 0;
+  font-size: 1.2em;
+}
+
+/* Main Media Screen */
+
+@media screen and (min-width: 800px) {
+	.main-content-special {
+		align-items: flex-start;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		min-height: 98vh;
+	}
+
+}
+
+/* Footer */
+
+.main-footer-special {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	width: 100%;
+	flex-wrap: wrap;
+	margin-top: auto;
+	margin-bottom: 0;
+}
+
+/* Footer -> Navbar*/
+.footer-nav-special {
+	/* margin-top: 20px; */
+	background-color: var(--main-nav-color);
+}
+
+.footer-nav-special ul {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+#copyright {
+	font-size: 0.75rem;
+	color: var(--main-text-color-over-pictures);
+}
+
+/* Foooter Media Screen */
+
+@media screen and (min-width: 800px) {
+	/* Footer -> NavBar */
+	.footer-nav-special {
+		height: 80px;
+	}
+
+	.footer-nav-special ul {
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		margin-top: 0;
+	}
+
+	.footer-nav-special ul li {
+		margin-top: 0;
+		margin-left: 30px;
+	}
+}
