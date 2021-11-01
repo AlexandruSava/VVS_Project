@@ -315,95 +315,103 @@
 <% if current_user %>
 
   <br><br><br>
+  <section class="form-style">
+    <p id="notice"><%= notice %></p>
 
-  <p id="notice"><%= notice %></p>
+    <p>
+      <strong>Name:</strong>
+      <%= @offer.name %>
+    </p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @offer.name %>
-  </p>
+    <p>
+      <strong>Description:</strong>
+      <%= @offer.description %>
+    </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @offer.description %>
-  </p>
+    <p>
+      <strong>Phone:</strong>
+      <%= @offer.phone %>
+    </p>
 
-  <p>
-    <strong>Phone:</strong>
-    <%= @offer.phone %>
-  </p>
+    <p>
+      <strong>Email:</strong>
+      <%= @offer.email %>
+    </p>
 
-  <p>
-    <strong>Email:</strong>
-    <%= @offer.email %>
-  </p>
+    <p>
+      <strong>Country:</strong>
+      <%= @offer.country %>
+    </p>
 
-  <p>
-    <strong>Country:</strong>
-    <%= @offer.country %>
-  </p>
+    <p>
+      <strong>Location:</strong>
+      <%= @offer.location %>
+    </p>
 
-  <p>
-    <strong>Location:</strong>
-    <%= @offer.location %>
-  </p>
+    <p>
+      <strong>Meals:</strong>
+      <%= @offer.meals %>
+    </p>
 
-  <p>
-    <strong>Meals:</strong>
-    <%= @offer.meals %>
-  </p>
+    <p>
+      <strong>Price:</strong>
+      <%= @offer.price %>
+    </p>
 
-  <p>
-    <strong>Price:</strong>
-    <%= @offer.price %>
-  </p>
+    <p>
+      <strong>Stars:</strong>
+      <%= @offer.stars %>
+    </p>
 
-  <p>
-    <strong>Stars:</strong>
-    <%= @offer.stars %>
-  </p>
+    <p>
+      <strong>Rating:</strong>
+      <%= @offer.rating %>
+    </p>
 
-  <p>
-    <strong>Rating:</strong>
-    <%= @offer.rating %>
-  </p>
+    <p>
+      <strong>Cleaning:</strong>
+      <%= @offer.cleaning %>
+    </p>
 
-  <p>
-    <strong>Cleaning:</strong>
-    <%= @offer.cleaning %>
-  </p>
+    <p>
+      <strong>Food:</strong>
+      <%= @offer.food %>
+    </p>
 
-  <p>
-    <strong>Food:</strong>
-    <%= @offer.food %>
-  </p>
+    <p>
+      <strong>Staff:</strong>
+      <%= @offer.staff %>
+    </p>
 
-  <p>
-    <strong>Staff:</strong>
-    <%= @offer.staff %>
-  </p>
+    <p>
+      <strong>Confort:</strong>
+      <%= @offer.confort %>
+    </p>
 
-  <p>
-    <strong>Confort:</strong>
-    <%= @offer.confort %>
-  </p>
+    <p>
+      <strong>Host name:</strong>
+      <%= @offer.host_name %>
+    </p>
 
-  <p>
-    <strong>Host name:</strong>
-    <%= @offer.host_name %>
-  </p>
+    <p>
+      <strong>Minimum stay:</strong>
+      <%= @offer.minimum_stay %>
+    </p>
 
-  <p>
-    <strong>Minimum stay:</strong>
-    <%= @offer.minimum_stay %>
-  </p>
+    <% if @offer.image.attached? %>
+      <p>
+        <strong>Image</strong>
+        <%= image_tag @offer.image.variant(resize: "500x500") %>
+      </p>
+    <% end %>
 
-  <%= link_to 'Edit', edit_offer_path(@offer) %> |
-  <%= link_to 'Back', offers_path %>
+    <%= link_to 'Edit', edit_offer_path(@offer) %> |
+    <%= link_to 'Back', offers_path %>
 
-  <script>
-    document.getElementById("offer-price").value = <%= @offer.price%>;
-  </script>
+    <script>
+      document.getElementById("offer-price").value = <%= @offer.price%>;
+    </script>
 
-  <%= javascript_include_tag 'script_offer'%>
+    <%= javascript_include_tag 'script_offer'%>
+  </section>
 <% end %>
