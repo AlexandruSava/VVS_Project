@@ -42,8 +42,13 @@
   margin-top: 20px;
 }
 
-.form-style button, h3, p {
+.form-style > * {
   margin-top: 20px;
   margin-bottom: 20px;
   width: 100%;
+  font-size: 1.5rem;
+}
+
+.price p {
+  display: inline;
 }
