@@ -38,6 +38,9 @@ gem 'rexml', '~> 3.2', '>= 3.2.4'
 # Static code analyzer (like lint)
 gem 'rubocop', require: false
 
+# Dynamic code analyzer (fore security)
+gem 'brakeman', require: false
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
