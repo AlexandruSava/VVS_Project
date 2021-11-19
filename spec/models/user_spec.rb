@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
@@ -51,5 +53,4 @@ RSpec.describe User, type: :model do
     user = described_class.new(email: 'alex@alex.com', password: 'alex')
     expect(user).not_to be_valid
   end
-
 end
