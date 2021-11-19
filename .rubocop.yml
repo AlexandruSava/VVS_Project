@@ -1,0 +1,23 @@
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Max: 200
+
+Metrics/MethodLength:
+  Max: 200
+
+Layout/LineLength:
+  Max: 256
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+AllCops:
+  NewCops: enable

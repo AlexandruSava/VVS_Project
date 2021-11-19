@@ -1,27 +1,27 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Offer, type: :model do
-  MyString = "This is a string"
-
-  subject {
+  subject do
     described_class.new(
-      name: MyString,
-      description: MyString,
-      phone: MyString,
-      email: MyString,
-      country: MyString,
-      location: MyString,
-      meals: MyString,
+      name: 'Test',
+      description: 'Test',
+      phone: 'Test',
+      email: 'Test',
+      country: 'Test',
+      location: 'Test',
+      meals: 'Test',
       price: 1.5,
       stars: 3,
       cleaning: 100,
       food: 50,
       staff: 100,
       confort: 50,
-      host_name: MyString,
-      minimum_stay: 5,
+      host_name: 'Test',
+      minimum_stay: 5
     )
-  }
+  end
 
   it 'is valid if all attributes are present and validated' do
     expect(subject).to be_valid
@@ -165,5 +165,4 @@ RSpec.describe Offer, type: :model do
   it 'calculates correctly the rating' do
     expect(subject.get_rating(subject)).to eq 75
   end
-
 end
