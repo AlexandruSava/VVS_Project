@@ -10,6 +10,10 @@
             <% if current_user %>
                 <li><a>|</a></li>
                 <li><%= link_to destroy_user_session_path, method: :delete do %>Logout<% end %></li>
+                <li><a>|</a></li>
+                <li><%= link_to edit_user_registration_path do %>Edit User<% end %></li>
+                <li><a>|</a></li>
+                <li><a>Welcome <%= current_user.email %></a></li>
             <% else %>
                 <li><a>|</a></li>
                 <li><%= link_to new_user_session_path do %>Login<% end %></li>

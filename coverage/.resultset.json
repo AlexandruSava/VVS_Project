@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/alex/projects/vvs_project/app/models/user.rb": {
+      "/home/alex/test/VVS_Project/app/models/user.rb": {
         "lines": [
           null,
           null,
@@ -13,7 +13,7 @@
           null
         ]
       },
-      "/home/alex/projects/vvs_project/app/models/application_record.rb": {
+      "/home/alex/test/VVS_Project/app/models/application_record.rb": {
         "lines": [
           null,
           null,
@@ -22,7 +22,7 @@
           null
         ]
       },
-      "/home/alex/projects/vvs_project/app/helpers/application_helper.rb": {
+      "/home/alex/test/VVS_Project/app/helpers/application_helper.rb": {
         "lines": [
           null,
           null,
@@ -30,7 +30,7 @@
           null
         ]
       },
-      "/home/alex/projects/vvs_project/app/helpers/offers_helper.rb": {
+      "/home/alex/test/VVS_Project/app/helpers/offers_helper.rb": {
         "lines": [
           null,
           null,
@@ -38,7 +38,7 @@
           null
         ]
       },
-      "/home/alex/projects/vvs_project/app/helpers/pages_helper.rb": {
+      "/home/alex/test/VVS_Project/app/helpers/pages_helper.rb": {
         "lines": [
           null,
           null,
@@ -46,7 +46,7 @@
           null
         ]
       },
-      "/home/alex/projects/vvs_project/app/controllers/pages_controller.rb": {
+      "/home/alex/test/VVS_Project/app/controllers/pages_controller.rb": {
         "lines": [
           null,
           null,
@@ -55,7 +55,7 @@
           null
         ]
       },
-      "/home/alex/projects/vvs_project/app/controllers/application_controller.rb": {
+      "/home/alex/test/VVS_Project/app/controllers/application_controller.rb": {
         "lines": [
           null,
           null,
@@ -63,7 +63,7 @@
           null
         ]
       },
-      "/home/alex/projects/vvs_project/app/models/offer.rb": {
+      "/home/alex/test/VVS_Project/app/models/offer.rb": {
         "lines": [
           null,
           null,
@@ -92,7 +92,7 @@
           null
         ]
       },
-      "/home/alex/projects/vvs_project/app/controllers/offers_controller.rb": {
+      "/home/alex/test/VVS_Project/app/controllers/offers_controller.rb": {
         "lines": [
           null,
           null,
@@ -168,7 +168,7 @@
           null
         ]
       },
-      "/home/alex/projects/vvs_project/app/channels/application_cable/channel.rb": {
+      "/home/alex/test/VVS_Project/app/channels/application_cable/channel.rb": {
         "lines": [
           null,
           null,
@@ -180,7 +180,7 @@
         "branches": {
         }
       },
-      "/home/alex/projects/vvs_project/app/channels/application_cable/connection.rb": {
+      "/home/alex/test/VVS_Project/app/channels/application_cable/connection.rb": {
         "lines": [
           null,
           null,
@@ -192,7 +192,7 @@
         "branches": {
         }
       },
-      "/home/alex/projects/vvs_project/app/jobs/application_job.rb": {
+      "/home/alex/test/VVS_Project/app/jobs/application_job.rb": {
         "lines": [
           null,
           null,
@@ -207,7 +207,7 @@
         "branches": {
         }
       },
-      "/home/alex/projects/vvs_project/app/mailers/application_mailer.rb": {
+      "/home/alex/test/VVS_Project/app/mailers/application_mailer.rb": {
         "lines": [
           null,
           null,
@@ -220,6 +220,6 @@
         }
       }
     },
-    "timestamp": 1637349638
+    "timestamp": 1639835120
   }
 }
