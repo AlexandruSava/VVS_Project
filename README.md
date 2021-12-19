@@ -9,4 +9,5 @@
 ## STATIC AND DYNAMIC ANALYSIS - STAGE 2
 - Static and Dynamic Analysis can be found in https://github.com/AlexandruSava/VVS_Project/blob/main/Static_dynamic_analysis.pdf
 
-## TBD - STAGE 3
+## GUI/Web Testing with Selenium IDE
+- The Selenium Project along with the automated tests can be found under selenium folder. The main use cases were tested.
