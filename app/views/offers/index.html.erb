@@ -103,7 +103,7 @@
         </thead>
 
         <tbody>
-            <% @offers.each do |offer| %>
+            <% @offers.order(:id).each do |offer| %>
             <tr>
                 <td><%= offer.name %></td>
                 <td><%= offer.phone %></td>
